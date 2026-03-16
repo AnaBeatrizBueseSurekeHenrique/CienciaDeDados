@@ -1,78 +1,108 @@
 import numpy as np
+print('Temperaturas médias')
 array = np.array([22,24,21,23,25,29,22])
 print(f'Média: {array.mean()}')
 print(f'Dia mais quente: {array.max()}')
 
 print('-------')
-
+print('ANalise de Vendas mensais')
 array = np.random.randint(50, 200, size=((3,4)))
 print('Vendas por produto:')
 print(array.sum(axis=1))
 print('-------')
 
+print('Pontuação de Teste')
 arr = np.array([75,88,92,65,70,80,95,60,85,78])
 print(f"Min: {arr.min()}")
 print(f"Max: {arr.max()}")
+
 print('-------')
+print('Dados de Sensores')
 arr = np.random.rand(20)
 print(arr[arr > 0.7])
+
 print('--------')
+print('Preços de ações')
 acao = np.array([120.50,121.00,119.80,122.30,120.00])
 print(np.var(acao))
+
 print('-----------')
+print('Matriz Identidade')
 ident = np.eye(4,4)
 print(ident)
+
 print("------")
+print('Criação com zeros e uns')
 zero = np.zeros((3,3))
 print(zero)
 um = np.ones((2,5))
 print(um)
+
 print('---------')
+print("Redimensionar para Imagem")
 array = np.random.randint(1,100,size=((5,5)))
 array.reshape((5,5))
+
 print('-------')
+print('Filtrar Números Pares')
 array = np.arange(10)
 print(array[array % 2 == 0])
+
 print('---------')
+print('Soma acumulada')
 array = np.arange(1,6)
 print(array.sum())
+
 print('----------')
+print('Valores Únicos')
 array = np.array([1,2,2,3,4,4,4,5])
 print(set(array))
 
 print('------')
+print("Interpolação Linear")
 arr = np.linspace(0, 10, num=5)
 print(arr)
+
 print('------')
+print('Média ponderada')
 arr = np.array([80,90,70])
 weight = np.array([0.3,0.5,0.2])
 var = arr*weight
 print((var.sum()/weight.sum()))
 
 print('------------')
+print("Tranposição de Dados")
 array = np.random.randint(1, 200, size=((2,3)))
 print(array.T)
 
 print('--------')
+print("Inverter Eixos")
 array = np.random.randint(1, 200, size=((3,4)))
 np.flip(array, axis=0)
 print(array)
 
 print('---------')
+print('Comparação Elemento A Elemento')
 arr = np.array([1,2,3])
 array = np.array([3,2,1])
 print([a if a ==b else 0 for a,b in zip(arr,array)] )
+print('----------')
+print("Mascara de Condição")
 array = np.random.randint(0, 100, size=(10))
 print(array[array > 50])
 
 print('---------')
+print('Contagem de Valores')
 array = np.array([1,7,3,7,5,7])
 print(np.count_nonzero(array == 7))
+
 print('------')
+print('Arredondamento')
 array = np.array([1.23,2.78,3.50,4.11])
 print(np.round(array))
 
 print('------')
+print('Combinar Arrays')
 array = np.array([1,2,3])
 arr = np.array([4,5,6])
 print(np.stack([array, arr], axis=1))
