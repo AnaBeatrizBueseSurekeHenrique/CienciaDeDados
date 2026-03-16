@@ -10,7 +10,7 @@ df = pd.read_csv(
         'Price':'float64',
         'Competitor Pricing': 'float64'
     },
-    na_values=['-', 'NA']
+    na_values=['-', 'NA'],
 )
 
 print(df.info())

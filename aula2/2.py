@@ -31,9 +31,12 @@ print(array.max(axis=1))
 print('----------')
 print('Broadcasting simples')
 a = np.array([1,2,3,4,5])
-a += 2
+for i in range(2,8,2):
+    a = np.insert(a,i, 2)
 print(a)
-
+b = np.array([1,2,3,4,5])
+b += 2
+print(b)
 print('---------')
 print("Concatenação")
 a = np.array([1,2,3])
